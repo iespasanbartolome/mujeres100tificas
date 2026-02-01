@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mujeres Científicas - IES Puerta del Andévalo</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#9213ec",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#1a1022",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        /* Custom scrollbar for chips */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#151118] dark:text-white font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e6e0e9] dark:border-[#362b3d] px-6 py-4 bg-white dark:bg-[#1a1022] sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<!-- Logo/Icon placeholder -->
+<span class="material-symbols-outlined text-4xl">science</span>
+</div>
+<h2 class="text-[#151118] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Mujeres 100tíficas</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 hidden md:flex">
+<div class="flex items-center gap-9">
+<a class="text-[#151118] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Inicio</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Científicas</a>
+<a class="text-[#151118] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Proyectos</a>
+<a class="text-[#151118] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Contacto</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Donar</span>
+</button>
+</div>
+<div class="md:hidden">
+<button class="text-[#151118] dark:text-white"><span class="material-symbols-outlined">menu</span></button>
+</div>
+</header>
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center py-5 px-4 md:px-10 lg:px-40">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+<!-- Hero Header for Section -->
+<div class="flex flex-col gap-6 py-10 items-center text-center">
+<div class="flex flex-col gap-2">
+<h1 class="text-[#151118] dark:text-white tracking-tight text-3xl md:text-5xl font-black leading-tight">
+                                Enciclopedia de Científicas
+                            </h1>
+<p class="text-[#796189] dark:text-gray-300 text-base md:text-lg font-normal leading-normal max-w-[720px] mx-auto">
+                                Explora las biografías de las mujeres que desafiaron las convenciones y redefinieron el conocimiento humano. Un archivo vivo del IES Puerta del Andévalo.
+                            </p>
+</div>
+</div>
+<!-- Search and Filters -->
+<div class="flex flex-col gap-4 mb-10 sticky top-[73px] z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm py-4 -mx-4 px-4 md:mx-0 md:px-0 md:static md:bg-transparent md:backdrop-blur-none">
+<!-- Search Bar -->
+<div class="w-full">
+<label class="flex flex-col h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full shadow-sm">
+<div class="text-[#796189] flex border-none bg-white dark:bg-[#2a1d33] items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg rounded-l-none border-none bg-white dark:bg-[#2a1d33] dark:text-white dark:placeholder-gray-500 text-[#151118] focus:outline-0 focus:ring-2 focus:ring-primary h-full placeholder:text-[#796189] px-4 pl-2 text-base font-normal leading-normal" placeholder="Buscar por nombre, descubrimiento o disciplina..." value=""/>
+</div>
+</label>
+</div>
+<!-- Chips -->
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-5 transition-all hover:shadow-md">
+<span class="text-sm font-bold leading-normal">Todas</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] px-5 hover:border-primary hover:text-primary dark:hover:text-primary transition-all">
+<span class="material-symbols-outlined text-[18px]">biotech</span>
+<span class="text-[#151118] dark:text-gray-200 text-sm font-medium leading-normal">Física y Química</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] px-5 hover:border-primary hover:text-primary dark:hover:text-primary transition-all">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+<span class="text-[#151118] dark:text-gray-200 text-sm font-medium leading-normal">Biología</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] px-5 hover:border-primary hover:text-primary dark:hover:text-primary transition-all">
+<span class="material-symbols-outlined text-[18px]">functions</span>
+<span class="text-[#151118] dark:text-gray-200 text-sm font-medium leading-normal">Matemáticas</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] px-5 hover:border-primary hover:text-primary dark:hover:text-primary transition-all">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span class="text-[#151118] dark:text-gray-200 text-sm font-medium leading-normal">Tecnología</span>
+</button>
+</div>
+</div>
+<!-- Scientist Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Card 1: Marie Curie -->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">science</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Física</span>
+</div>
+<img alt="Marie Curie" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Black and white portrait of a woman in a lab coat working with equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfdCQbhyNA5WeU0OcgM8JoHxgm5DQe7K4_N6T89T3TZ5xKZTteX9ghgJIf-1LgaeA11HIv2ueQbI5S-2jVo8iz1eei7iZClhW9Pynn0MAXWOlIXqSaqfSXcugUM1WdEcWmS-348Sg9j2_Vr5UyWujmT-U45-RtcM6nk5DdLuMiQiQSOL1LS04O7KTlSn99OSU53XBGfC98ycnrHlMaB0HgRI4zgFjIXdFG8fpoR6e35AiEI9uIVV5X0IucYLCk9La-_7JqrEpkg9Y"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Marie Curie</h3>
+<p class="text-primary text-sm font-medium">Pionera en Radiactividad</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Primera persona en recibir dos premios Nobel en distintas especialidades: Física y Química.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/curie.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 2: Rosalind Franklin -->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">biotech</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Biofísica</span>
+</div>
+<img alt="Rosalind Franklin" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Laboratory equipment glass beakers with liquid on a table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWZ3MNKwLf8p27DxqPfx8ZxN5kwemxgH6fTSsBjkDrQZgVdekOH_Fs5iuJvAfHiu7pRPX2CJdztfudM7r1OBhd-TvkBXP0zOC9oT5aZjqa3I5Y5KOxqUxMRSINeh9AcXXCEEnfM2S6VnGUUItDtYB6iIqQiWAYuUHfW0dGnjBMIK03FLIOCMxzgH26z8G-WIaWTPDzuJSNmyUbnoDSwvu9zzkbeiFn0ifXJ7C6gFbwwf0Te6bi5xnHHnqIspcAxxNlcFK4lTKcSHI"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Rosalind Franklin</h3>
+<p class="text-primary text-sm font-medium">La Dama del ADN</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Química y cristalógrafa de rayos X cuyo trabajo fue central para la comprensión de la estructura del ADN.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/rosalind.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 3: Ada Lovelace -->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">terminal</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Computación</span>
+</div>
+<img alt="Ada Lovelace" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Classic portrait painting of a victorian woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7mDlh3wAs-lIZw2Vc-DpNEAdBHZzqqb9QbwJyKF6vBMDpvwCTY-NMecEe6Z9rZRJkp_VG_Cw_IQnIVo_7fVO8a0FIr6OLW7wahLkgNyz9OOIXyRe85YDY5gPYFog1TD5jJRpKBelAPIdF5kNQkTDAf1ypJEt3qmd-NKXi3BxM3TATudmJORUCkHOQPnDl8Cxd-2sKP0CD4BCPqzC6UHOX6sKqxk0XCzZIa97sPKxYzcQsJfIofm9dwNkP6wRHY01Bk_8bX424Eec"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Ada Lovelace</h3>
+<p class="text-primary text-sm font-medium">Primera Programadora</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Matemática y escritora, célebre por su trabajo sobre la máquina calculadora mecánica de uso general.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/adalovelace.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 4: Margarita Salas -->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">genetics</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Bioquímica</span>
+</div>
+<img alt="Margarita Salas" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Modern professional woman scientist smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRSvrDnhFBVk-C12wjGtXuG7Jp6dywcdrNuo8qhDpB0zYZmUlbJL3hMKmWIa0vzUy8RNXBURfzFGitALRuSIDMIQNiyezhytDZ5OO3JDekuAWrjHFEb4If-3W2_5AL6fkCZPjDjnWJEN3ojiPUoGwjkav_KtthqRFMg-Hkerw9X-X4hgjUlXxZVUMe3lY62tEh7fQjiidekX5JuXPzPzp0YuRhoS-rSaeUNDwC0jRqYYE8-GXixg4rewV4dM0iAYIJUOESDlTk8ZA"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Margarita Salas</h3>
+<p class="text-primary text-sm font-medium">Impulsora de la Biología Molecular</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Sus estudios sobre la ADN polimerasa del bacteriófago phi29 revolucionaron la genética forense.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/margaritasalas.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 5: Hedy Lamarr -->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">wifi</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Ingeniería</span>
+</div>
+<img alt="Hedy Lamarr" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Vintage black and white photo of a glamorous woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6lVBG5A_sTaj28hsHO45xCw8WzMhluGnnfRyD7enCS4zXLWLCT7GciOJzABavOBxvSuco1jFGbDamwQtHrCXBpy13bxv4LDqgU3cT-wyxNRJF2gQFZqr6C4b97rlLVy_8BpEDsuyuk6K-9JZsQ2dnKUU3X6fkp2PJG7BWpzRrMSp_WNU53qA0Eq2SFehpuqcQmiqTK4iyU6lQnoI4SMOVfMQ2r5lmc3ZJFFQkUXvJxTIIdVmbjFSRJlAqMtdbW8-RPmZ_QLmTTmo"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Hedy Lamarr</h3>
+<p class="text-primary text-sm font-medium">Inventora del WiFi</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Actriz e inventora que codesarrolló una versión temprana de la técnica de salto de frecuencia.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/hedylamarr.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 6: Hipatia de Alejandría -->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">calculate</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Matemáticas</span>
+</div>
+<img alt="Katherine Johnson" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Black and white portrait of a woman looking up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PqC8B9ksY0yitBGQ_nb2juX5cjAQ56ZWdabWgmgfGM095hNUvjuasnhQZ6wStSdAFLtQ63T8wInbsD4boF7hcaaWHHFX5s7IUaeeXJtKgW7P04v4pUmfdxA1kfdZV2KVaJGIIhIt_jX6_GsM9UhURKYF-Zh7IAkUCroi9UdgdUC8zWVXArq-5NZlLCWpeRjXmim15EMeX26fwOYEotFepLjuBYvFikgUi43FDJsx7Zo5Z6JhznCds6n9t8fpDyhPTylEurmb6d4"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Katherine Johnson</h3>
+<p class="text-primary text-sm font-medium">Calculadora de la NASA</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Sus cálculos de mecánica orbital fueron fundamentales para el éxito de los primeros vuelos espaciales.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/hipatia.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 7: Katherine Johnson -->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">calculate</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Matemáticas</span>
+</div>
+<img alt="Katherine Johnson" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Black and white portrait of a woman looking up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PqC8B9ksY0yitBGQ_nb2juX5cjAQ56ZWdabWgmgfGM095hNUvjuasnhQZ6wStSdAFLtQ63T8wInbsD4boF7hcaaWHHFX5s7IUaeeXJtKgW7P04v4pUmfdxA1kfdZV2KVaJGIIhIt_jX6_GsM9UhURKYF-Zh7IAkUCroi9UdgdUC8zWVXArq-5NZlLCWpeRjXmim15EMeX26fwOYEotFepLjuBYvFikgUi43FDJsx7Zo5Z6JhznCds6n9t8fpDyhPTylEurmb6d4"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Katherine Johnson</h3>
+<p class="text-primary text-sm font-medium">Calculadora de la NASA</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Sus cálculos de mecánica orbital fueron fundamentales para el éxito de los primeros vuelos espaciales.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 8: Emmy Noether -->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">calculate</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Matemáticas</span>
+</div>
+<img alt="Katherine Johnson" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Black and white portrait of a woman looking up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PqC8B9ksY0yitBGQ_nb2juX5cjAQ56ZWdabWgmgfGM095hNUvjuasnhQZ6wStSdAFLtQ63T8wInbsD4boF7hcaaWHHFX5s7IUaeeXJtKgW7P04v4pUmfdxA1kfdZV2KVaJGIIhIt_jX6_GsM9UhURKYF-Zh7IAkUCroi9UdgdUC8zWVXArq-5NZlLCWpeRjXmim15EMeX26fwOYEotFepLjuBYvFikgUi43FDJsx7Zo5Z6JhznCds6n9t8fpDyhPTylEurmb6d4"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Katherine Johnson</h3>
+<p class="text-primary text-sm font-medium">Calculadora de la NASA</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Sus cálculos de mecánica orbital fueron fundamentales para el éxito de los primeros vuelos espaciales.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/emmy.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 9:Grace Murray Hoper -->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">calculate</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Matemáticas</span>
+</div>
+<img alt="Katherine Johnson" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Black and white portrait of a woman looking up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PqC8B9ksY0yitBGQ_nb2juX5cjAQ56ZWdabWgmgfGM095hNUvjuasnhQZ6wStSdAFLtQ63T8wInbsD4boF7hcaaWHHFX5s7IUaeeXJtKgW7P04v4pUmfdxA1kfdZV2KVaJGIIhIt_jX6_GsM9UhURKYF-Zh7IAkUCroi9UdgdUC8zWVXArq-5NZlLCWpeRjXmim15EMeX26fwOYEotFepLjuBYvFikgUi43FDJsx7Zo5Z6JhznCds6n9t8fpDyhPTylEurmb6d4"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Katherine Johnson</h3>
+<p class="text-primary text-sm font-medium">Calculadora de la NASA</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Sus cálculos de mecánica orbital fueron fundamentales para el éxito de los primeros vuelos espaciales.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/gracemurray.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 10:Ángela Ruiz Robles -->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">calculate</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Matemáticas</span>
+</div>
+<img alt="Katherine Johnson" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Black and white portrait of a woman looking up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PqC8B9ksY0yitBGQ_nb2juX5cjAQ56ZWdabWgmgfGM095hNUvjuasnhQZ6wStSdAFLtQ63T8wInbsD4boF7hcaaWHHFX5s7IUaeeXJtKgW7P04v4pUmfdxA1kfdZV2KVaJGIIhIt_jX6_GsM9UhURKYF-Zh7IAkUCroi9UdgdUC8zWVXArq-5NZlLCWpeRjXmim15EMeX26fwOYEotFepLjuBYvFikgUi43FDJsx7Zo5Z6JhznCds6n9t8fpDyhPTylEurmb6d4"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Katherine Johnson</h3>
+<p class="text-primary text-sm font-medium">Calculadora de la NASA</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Sus cálculos de mecánica orbital fueron fundamentales para el éxito de los primeros vuelos espaciales.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/angelaruiz.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 11:Irene Joliot-Curie -->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">calculate</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Matemáticas</span>
+</div>
+<img alt="Katherine Johnson" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Black and white portrait of a woman looking up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PqC8B9ksY0yitBGQ_nb2juX5cjAQ56ZWdabWgmgfGM095hNUvjuasnhQZ6wStSdAFLtQ63T8wInbsD4boF7hcaaWHHFX5s7IUaeeXJtKgW7P04v4pUmfdxA1kfdZV2KVaJGIIhIt_jX6_GsM9UhURKYF-Zh7IAkUCroi9UdgdUC8zWVXArq-5NZlLCWpeRjXmim15EMeX26fwOYEotFepLjuBYvFikgUi43FDJsx7Zo5Z6JhznCds6n9t8fpDyhPTylEurmb6d4"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Katherine Johnson</h3>
+<p class="text-primary text-sm font-medium">Calculadora de la NASA</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Sus cálculos de mecánica orbital fueron fundamentales para el éxito de los primeros vuelos espaciales.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/irenejoliot.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 12: Sara García Alonso -->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">calculate</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Matemáticas</span>
+</div>
+<img alt="Katherine Johnson" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Black and white portrait of a woman looking up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PqC8B9ksY0yitBGQ_nb2juX5cjAQ56ZWdabWgmgfGM095hNUvjuasnhQZ6wStSdAFLtQ63T8wInbsD4boF7hcaaWHHFX5s7IUaeeXJtKgW7P04v4pUmfdxA1kfdZV2KVaJGIIhIt_jX6_GsM9UhURKYF-Zh7IAkUCroi9UdgdUC8zWVXArq-5NZlLCWpeRjXmim15EMeX26fwOYEotFepLjuBYvFikgUi43FDJsx7Zo5Z6JhznCds6n9t8fpDyhPTylEurmb6d4"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Katherine Johnson</h3>
+<p class="text-primary text-sm font-medium">Calculadora de la NASA</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Sus cálculos de mecánica orbital fueron fundamentales para el éxito de los primeros vuelos espaciales.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/saragarcia.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 13:Clara Grima -->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">calculate</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Matemáticas</span>
+</div>
+<img alt="Katherine Johnson" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Black and white portrait of a woman looking up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PqC8B9ksY0yitBGQ_nb2juX5cjAQ56ZWdabWgmgfGM095hNUvjuasnhQZ6wStSdAFLtQ63T8wInbsD4boF7hcaaWHHFX5s7IUaeeXJtKgW7P04v4pUmfdxA1kfdZV2KVaJGIIhIt_jX6_GsM9UhURKYF-Zh7IAkUCroi9UdgdUC8zWVXArq-5NZlLCWpeRjXmim15EMeX26fwOYEotFepLjuBYvFikgUi43FDJsx7Zo5Z6JhznCds6n9t8fpDyhPTylEurmb6d4"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Katherine Johnson</h3>
+<p class="text-primary text-sm font-medium">Calculadora de la NASA</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Sus cálculos de mecánica orbital fueron fundamentales para el éxito de los primeros vuelos espaciales.
+                                </p>
+ <a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/claragrima.html">
+                                    Leer Biografía
+ </a>
+</div>
+</div>
+<!-- Card 14:Marithania Silvero-->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">calculate</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Matemáticas</span>
+</div>
+<img alt="Katherine Johnson" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Black and white portrait of a woman looking up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PqC8B9ksY0yitBGQ_nb2juX5cjAQ56ZWdabWgmgfGM095hNUvjuasnhQZ6wStSdAFLtQ63T8wInbsD4boF7hcaaWHHFX5s7IUaeeXJtKgW7P04v4pUmfdxA1kfdZV2KVaJGIIhIt_jX6_GsM9UhURKYF-Zh7IAkUCroi9UdgdUC8zWVXArq-5NZlLCWpeRjXmim15EMeX26fwOYEotFepLjuBYvFikgUi43FDJsx7Zo5Z6JhznCds6n9t8fpDyhPTylEurmb6d4"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Katherine Johnson</h3>
+<p class="text-primary text-sm font-medium">Calculadora de la NASA</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Sus cálculos de mecánica orbital fueron fundamentales para el éxito de los primeros vuelos espaciales.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/marithania.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 15:Jane Goodal-->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">calculate</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Matemáticas</span>
+</div>
+<img alt="Katherine Johnson" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Black and white portrait of a woman looking up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PqC8B9ksY0yitBGQ_nb2juX5cjAQ56ZWdabWgmgfGM095hNUvjuasnhQZ6wStSdAFLtQ63T8wInbsD4boF7hcaaWHHFX5s7IUaeeXJtKgW7P04v4pUmfdxA1kfdZV2KVaJGIIhIt_jX6_GsM9UhURKYF-Zh7IAkUCroi9UdgdUC8zWVXArq-5NZlLCWpeRjXmim15EMeX26fwOYEotFepLjuBYvFikgUi43FDJsx7Zo5Z6JhznCds6n9t8fpDyhPTylEurmb6d4"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Katherine Johnson</h3>
+<p class="text-primary text-sm font-medium">Calculadora de la NASA</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Sus cálculos de mecánica orbital fueron fundamentales para el éxito de los primeros vuelos espaciales.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/janegoodal.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 16:Sonia Fernández-Vidal -->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">calculate</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Matemáticas</span>
+</div>
+<img alt="Katherine Johnson" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Black and white portrait of a woman looking up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PqC8B9ksY0yitBGQ_nb2juX5cjAQ56ZWdabWgmgfGM095hNUvjuasnhQZ6wStSdAFLtQ63T8wInbsD4boF7hcaaWHHFX5s7IUaeeXJtKgW7P04v4pUmfdxA1kfdZV2KVaJGIIhIt_jX6_GsM9UhURKYF-Zh7IAkUCroi9UdgdUC8zWVXArq-5NZlLCWpeRjXmim15EMeX26fwOYEotFepLjuBYvFikgUi43FDJsx7Zo5Z6JhznCds6n9t8fpDyhPTylEurmb6d4"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Katherine Johnson</h3>
+<p class="text-primary text-sm font-medium">Calculadora de la NASA</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Sus cálculos de mecánica orbital fueron fundamentales para el éxito de los primeros vuelos espaciales.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/sonia.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 17:Elena Garcia Armada -->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">calculate</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Matemáticas</span>
+</div>
+<img alt="Katherine Johnson" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Black and white portrait of a woman looking up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PqC8B9ksY0yitBGQ_nb2juX5cjAQ56ZWdabWgmgfGM095hNUvjuasnhQZ6wStSdAFLtQ63T8wInbsD4boF7hcaaWHHFX5s7IUaeeXJtKgW7P04v4pUmfdxA1kfdZV2KVaJGIIhIt_jX6_GsM9UhURKYF-Zh7IAkUCroi9UdgdUC8zWVXArq-5NZlLCWpeRjXmim15EMeX26fwOYEotFepLjuBYvFikgUi43FDJsx7Zo5Z6JhznCds6n9t8fpDyhPTylEurmb6d4"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Katherine Johnson</h3>
+<p class="text-primary text-sm font-medium">Calculadora de la NASA</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Sus cálculos de mecánica orbital fueron fundamentales para el éxito de los primeros vuelos espaciales.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/elena.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 18:Rosa Menéndez -->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">calculate</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Matemáticas</span>
+</div>
+<img alt="Katherine Johnson" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Black and white portrait of a woman looking up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PqC8B9ksY0yitBGQ_nb2juX5cjAQ56ZWdabWgmgfGM095hNUvjuasnhQZ6wStSdAFLtQ63T8wInbsD4boF7hcaaWHHFX5s7IUaeeXJtKgW7P04v4pUmfdxA1kfdZV2KVaJGIIhIt_jX6_GsM9UhURKYF-Zh7IAkUCroi9UdgdUC8zWVXArq-5NZlLCWpeRjXmim15EMeX26fwOYEotFepLjuBYvFikgUi43FDJsx7Zo5Z6JhznCds6n9t8fpDyhPTylEurmb6d4"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Katherine Johnson</h3>
+<p class="text-primary text-sm font-medium">Calculadora de la NASA</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Sus cálculos de mecánica orbital fueron fundamentales para el éxito de los primeros vuelos espaciales.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/rosamenendez.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 19:Eva Laín  -->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">calculate</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Matemáticas</span>
+</div>
+<img alt="Katherine Johnson" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Black and white portrait of a woman looking up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PqC8B9ksY0yitBGQ_nb2juX5cjAQ56ZWdabWgmgfGM095hNUvjuasnhQZ6wStSdAFLtQ63T8wInbsD4boF7hcaaWHHFX5s7IUaeeXJtKgW7P04v4pUmfdxA1kfdZV2KVaJGIIhIt_jX6_GsM9UhURKYF-Zh7IAkUCroi9UdgdUC8zWVXArq-5NZlLCWpeRjXmim15EMeX26fwOYEotFepLjuBYvFikgUi43FDJsx7Zo5Z6JhznCds6n9t8fpDyhPTylEurmb6d4"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Katherine Johnson</h3>
+<p class="text-primary text-sm font-medium">Calculadora de la NASA</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Sus cálculos de mecánica orbital fueron fundamentales para el éxito de los primeros vuelos espaciales.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/evalain.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 20:Alicia Calderón -->
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">calculate</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Matemáticas</span>
+</div>
+<img alt="Katherine Johnson" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Black and white portrait of a woman looking up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PqC8B9ksY0yitBGQ_nb2juX5cjAQ56ZWdabWgmgfGM095hNUvjuasnhQZ6wStSdAFLtQ63T8wInbsD4boF7hcaaWHHFX5s7IUaeeXJtKgW7P04v4pUmfdxA1kfdZV2KVaJGIIhIt_jX6_GsM9UhURKYF-Zh7IAkUCroi9UdgdUC8zWVXArq-5NZlLCWpeRjXmim15EMeX26fwOYEotFepLjuBYvFikgUi43FDJsx7Zo5Z6JhznCds6n9t8fpDyhPTylEurmb6d4"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Katherine Johnson</h3>
+<p class="text-primary text-sm font-medium">Calculadora de la NASA</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Sus cálculos de mecánica orbital fueron fundamentales para el éxito de los primeros vuelos espaciales.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/alicia.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card 21:Débora García-->
+
+<div class="flex flex-col group overflow-hidden rounded-xl bg-white dark:bg-[#2a1d33] border border-[#e6e0e9] dark:border-[#362b3d] shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-gray-100">
+<div class="absolute top-3 right-3 z-10 bg-black/50 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-white text-xs">calculate</span>
+<span class="text-white text-xs font-bold uppercase tracking-wider">Matemáticas</span>
+</div>
+<img alt="Katherine Johnson" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Black and white portrait of a woman looking up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PqC8B9ksY0yitBGQ_nb2juX5cjAQ56ZWdabWgmgfGM095hNUvjuasnhQZ6wStSdAFLtQ63T8wInbsD4boF7hcaaWHHFX5s7IUaeeXJtKgW7P04v4pUmfdxA1kfdZV2KVaJGIIhIt_jX6_GsM9UhURKYF-Zh7IAkUCroi9UdgdUC8zWVXArq-5NZlLCWpeRjXmim15EMeX26fwOYEotFepLjuBYvFikgUi43FDJsx7Zo5Z6JhznCds6n9t8fpDyhPTylEurmb6d4"/>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-[#151118] dark:text-white text-xl font-bold leading-tight">Katherine Johnson</h3>
+<p class="text-primary text-sm font-medium">Calculadora de la NASA</p>
+</div>
+<p class="text-[#796189] dark:text-gray-400 text-sm line-clamp-3">
+                                    Sus cálculos de mecánica orbital fueron fundamentales para el éxito de los primeros vuelos espaciales.
+                                </p>
+<a class="mt-auto w-full rounded-lg bg-primary/10 dark:bg-primary/20 py-2.5 text-center text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors duration-200" href="perfiles/devora.html">
+                                    Leer Biografía
+</a>
+</div>
+</div>
+<!-- Card Add New (Admin/Student View) -->
+<div class="flex flex-col min-h-[400px] group overflow-hidden rounded-xl bg-[#f8f9fa] dark:bg-[#2a1d33]/50 border-2 border-dashed border-[#e6e0e9] dark:border-[#362b3d] hover:border-primary transition-all duration-300 cursor-pointer items-center justify-center gap-4">
+<div class="flex items-center justify-center w-16 h-16 rounded-full bg-white dark:bg-[#362b3d] shadow-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">add</span>
+</div>
+<div class="text-center px-6">
+<h3 class="text-[#151118] dark:text-white text-lg font-bold leading-tight">Sugerir Científica</h3>
+<p class="text-[#796189] dark:text-gray-400 text-sm mt-2">
+                                    ¿Falta alguien importante? Ayúdanos a completar nuestra enciclopedia.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="flex justify-center mt-12 mb-8">
+<button class="flex items-center gap-2 text-sm font-bold text-[#151118] dark:text-white border border-[#e6e0e9] dark:border-[#362b3d] bg-white dark:bg-[#2a1d33] py-2 px-6 rounded-lg hover:bg-gray-50 dark:hover:bg-[#362b3d] transition-colors">
+<span>Ver más perfiles</span>
+<span class="material-symbols-outlined text-sm">arrow_downward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-white dark:bg-[#1a1022] border-t border-[#e6e0e9] dark:border-[#362b3d] py-10 px-6 md:px-20 mt-auto">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-col gap-2 text-center md:text-left">
+<h3 class="text-[#151118] dark:text-white font-bold text-lg">Mujeres 100tíficas</h3>
+<p class="text-[#796189] dark:text-gray-400 text-sm">Proyecto educativo del IES Puerta del Andévalo.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-[#796189] dark:text-gray-400 hover:text-primary text-sm font-medium" href="#">Aviso Legal</a>
+<a class="text-[#796189] dark:text-gray-400 hover:text-primary text-sm font-medium" href="#">Privacidad</a>
+<a class="text-[#796189] dark:text-gray-400 hover:text-primary text-sm font-medium" href="#">Contacto</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
