@@ -27,6 +27,17 @@
             },
         }
     </script>
+<div id="mobile-menu" class="hidden xl:hidden bg-white dark:bg-[#1a1022] border-b border-[#f3f0f4] dark:border-[#2d2438] px-4 py-4">
+    <nav class="flex flex-col gap-4">
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Inicio</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="cientificas.html">Mujeres Científicas</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="ocultas.html">Mujeres Ocultas</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="empoderadas.html">Blog Empoderadas</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="divulgacionPLE.html">PLE Divulgación</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="proyectos.html">Otros Proyectos</a>
+        <a class="bg-primary text-white text-center py-3 rounded-lg font-bold" href="https://blogsaverroes.juntadeandalucia.es/iespuertadelandevalo/contactar-con-el-centro/">Contactar</a>
+    </nav>
+</div>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-[#151118] dark:text-white font-display">
 <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
@@ -52,9 +63,9 @@
 <span class="truncate">Contactar</span>
 </a>
 </div>
-<div class="xl:hidden text-[#151118] dark:text-white">
-<span class="material-symbols-outlined">menu</span>
-</div>
+<button id="mobile-menu-button" class="xl:hidden text-[#151118] dark:text-white p-2">
+    <span class="material-symbols-outlined text-[32px]">menu</span>
+</button>
 </div>
 </div>
 </div>
@@ -274,5 +285,12 @@
 </div>
 </footer>
 </div>
+<script>
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
 
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
 </body></html>
