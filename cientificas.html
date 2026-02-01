@@ -92,7 +92,7 @@
 <div class="text-[#796189] flex border-none bg-white dark:bg-[#2a1d33] items-center justify-center pl-4 rounded-l-lg border-r-0">
 <span class="material-symbols-outlined">search</span>
 </div>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg rounded-l-none border-none bg-white dark:bg-[#2a1d33] dark:text-white dark:placeholder-gray-500 text-[#151118] focus:outline-0 focus:ring-2 focus:ring-primary h-full placeholder:text-[#796189] px-4 pl-2 text-base font-normal leading-normal" placeholder="Buscar por nombre, descubrimiento o disciplina..." value=""/>
+<input id="searchInput" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg rounded-l-none border-none bg-white dark:bg-[#2a1d33] dark:text-white dark:placeholder-gray-500 text-[#151118] focus:outline-0 focus:ring-2 focus:ring-primary h-full placeholder:text-[#796189] px-4 pl-2 text-base font-normal leading-normal" placeholder="Buscar por nombre o disciplina" value=""/>
 </div>
 </label>
 </div>
@@ -617,5 +617,43 @@
     btn.addEventListener('click', () => {
         menu.classList.toggle('hidden');
     });
+document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('searchInput');
+        const cards = document.querySelectorAll('.scientist-card');
+
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+
+            cards.forEach(card => {
+                // Obtenemos el nombre y la descripción para buscar en ambos
+                const name = card.querySelector('.scientist-name').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                const profession = card.querySelector('.text-primary').textContent.toLowerCase();
+
+                if (name.includes(searchTerm) || 
+                    description.includes(searchTerm) || 
+                    profession.includes(searchTerm)) {
+                    card.style.display = 'flex'; // Muestra la tarjeta
+                } else {
+                    card.style.display = 'none'; // Oculta la tarjeta
+                }
+            });
+        });
+    });
+// Para los botones de categorías
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', () => {
+        const category = button.textContent.trim().toLowerCase();
+        if (category === "todas") {
+            cards.forEach(c => c.style.display = 'flex');
+        } else {
+            // Filtra por el texto del badge de la categoría en la tarjeta
+            cards.forEach(card => {
+                const cardCategory = card.querySelector('.uppercase').textContent.toLowerCase();
+                card.style.display = cardCategory.includes(category) ? 'flex' : 'none';
+            });
+        }
+    });
+});
 </script>
 </body></html>
