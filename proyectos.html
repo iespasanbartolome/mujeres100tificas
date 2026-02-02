@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-
-<html class="light" lang="es"><head>
+<a class="light" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Otros Proyectos - Mujeres 100tíficas</title>
+<title>Mujeres 100tíficas by IES Puerta del Andévalo</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Noto+Sans:wght@300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -19,74 +19,56 @@
                         "background-dark": "#1a1022",
                     },
                     fontFamily: {
-                        "display": ["Lexend", "sans-serif"]
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
                     },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
                 },
             },
         }
     </script>
-<style>
-        body {
-            font-family: 'Lexend', sans-serif;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
+<div id="mobile-menu" class="hidden xl:hidden bg-white dark:bg-[#1a1022] border-b border-[#f3f0f4] dark:border-[#2d2438] px-4 py-4">
+    <nav class="flex flex-col gap-4">
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Inicio</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="cientificas.html">Mujeres Científicas</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="ocultas.html">Mujeres Ocultas</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="empoderadas.html">Blog Empoderadas</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="divulgacionPLE.html">PLE Divulgación</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="proyectos.html">Otros Proyectos</a>
+        <a class="bg-primary text-white text-center py-3 rounded-lg font-bold" href="https://blogsaverroes.juntadeandalucia.es/iespuertadelandevalo/contactar-con-el-centro/">Contactar</a>
+    </nav>
+</div>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-[#151118] dark:text-white transition-colors duration-200">
-<!-- Main Container -->
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-<div class="layout-container flex h-full grow flex-col">
-<!-- Top Navigation Bar -->
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#f3f0f4] dark:border-white/10 px-10 py-3 bg-white dark:bg-background-dark sticky top-0 z-50">
-<div class="flex items-center gap-8">
-<div class="flex items-center gap-4 text-primary">
-<div class="size-8">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
-<path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
+<body class="bg-background-light dark:bg-background-dark text-[#151118] dark:text-white font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="w-full bg-white dark:bg-[#1a1022] border-b border-[#f3f0f4] dark:border-[#2d2438] sticky top-0 z-50">
+<div class="layout-container flex justify-center w-full">
+<div class="flex max-w-[1280px] w-full items-center justify-between px-4 py-3 md:px-10">
+<div class="flex items-center gap-4 text-[#151118] dark:text-white cursor-pointer">
+<div class="size-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">science</span>
 </div>
-<h2 class="text-[#151118] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Mujeres 100tíficas</h2>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Mujeres 100tíficas</h2>
 </div>
-<nav class="flex items-center gap-9">
-<a class="text-[#151118] dark:text-white/80 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Inicio</a>
-<a class="text-[#151118] dark:text-white/80 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Biografías</a>
-<a class="text-[#151118] dark:text-white/80 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Proyectos</a>
-<a class="text-[#151118] dark:text-white/80 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">STEAM</a>
-<a class="text-[#151118] dark:text-white/80 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Contacto</a>
+<div class="hidden xl:flex flex-1 justify-end gap-6 items-center">
+<nav class="flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Inicio</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="cientificas.html">Mujeres Científicas</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="ocultas.html">Mujeres Ocultas</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="empoderadas.html">Blog Empoderadas</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="divulgacionPLE.html">PLE Divulgación</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="proyectos.html">Otros Proyectos</a>
 </nav>
+<a class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]" href="https://blogsaverroes.juntadeandalucia.es/iespuertadelandevalo/contactar-con-el-centro/">
+<span class="truncate">Contactar</span>
+</a>
 </div>
-<div class="flex flex-1 justify-end gap-6 items-center">
-<label class="flex flex-col min-w-40 !h-10 max-w-64">
-<div class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden border border-[#f3f0f4] dark:border-white/10">
-<div class="text-[#796189] flex bg-[#f3f0f4] dark:bg-white/5 items-center justify-center pl-4">
-<span class="material-symbols-outlined text-xl">search</span>
-</div>
-<input class="form-input flex w-full min-w-0 flex-1 border-none bg-[#f3f0f4] dark:bg-white/5 text-[#151118] dark:text-white focus:ring-0 placeholder:text-[#796189] px-2 text-base font-normal" placeholder="Buscar proyectos..." value=""/>
-</div>
-</label>
-<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold tracking-[0.015em] hover:opacity-90 transition-opacity">
-<span>Donar</span>
+<button id="mobile-menu-button" class="xl:hidden text-[#151118] dark:text-white p-2">
+    <span class="material-symbols-outlined text-[32px]">menu</span>
 </button>
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBQp6OBy2nGL5Xo7yv-HeEsZ-5XGmTNYi37j4AA0_wkY8N-ylWeG0TM1E-gWyZw4-xw3VQqyAW5VDUqFYkMXkMBDMy8N6MaylC2S7J7m-PchkdOBFNUhgTQa_7h2XJvF3Y3JcticMTOPHVHawVYlX7nt38bMT-m1l4c_5b31Z1y5qQATXw2_ky3IT70T8l4_uITA9H169flhkFdzsGk0b1srlQGv_F6_AVO82ul7AI3MF8tx0Wo5SFC2D6qNijsFgReHUtlobw9A3c");'></div>
 </div>
-</header>
-<main class="flex flex-col flex-1 items-center py-8">
-<div class="layout-content-container flex flex-col max-w-[1024px] w-full px-6">
-<!-- Breadcrumbs -->
-<nav class="flex flex-wrap gap-2 py-2">
-<a class="text-[#796189] dark:text-white/60 text-sm font-medium hover:text-primary" href="#">Inicio</a>
-<span class="text-[#796189] dark:text-white/40 text-sm">/</span>
-<span class="text-[#151118] dark:text-white text-sm font-medium">Otros Proyectos</span>
-</nav>
+</div>
+</div>
 <!-- Page Heading -->
 <section class="flex flex-wrap justify-between items-end gap-6 py-6">
 <div class="flex min-w-72 flex-col gap-4 max-w-2xl">
@@ -228,34 +210,29 @@
 </div>
 </main>
 <!-- Simple Footer -->
-<footer class="w-full bg-white dark:bg-background-dark border-t border-[#f3f0f4] dark:border-white/10 py-10">
-<div class="max-w-[1024px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="flex flex-col gap-2 text-center md:text-left">
-<div class="flex items-center gap-2 justify-center md:justify-start">
-<div class="size-6 text-primary">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
-<path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
+<footer class="bg-white dark:bg-[#1a1022] border-t border-[#f3f0f4] dark:border-[#2d2438] py-10 mt-auto">
+<div class="layout-container flex justify-center w-full px-4 md:px-10">
+<div class="flex flex-col max-w-[1280px] w-full items-center gap-6">
+<div class="flex items-center gap-2 text-[#151118] dark:text-white">
+<span class="material-symbols-outlined text-primary">science</span>
+<span class="font-bold text-lg">Mujeres 100tíficas</span>
 </div>
-<span class="text-lg font-bold text-[#151118] dark:text-white">Mujeres 100tíficas</span>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm text-[#796189] dark:text-gray-400">
+<a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+<a class="hover:text-primary transition-colors" href="cientificas.html">Mujeres Científicas</a>
+<a class="hover:text-primary transition-colors" href="ocultas.html">Mujeres Ocultas</a>
+<a class="hover:text-primary transition-colors" href="empoderadas.html">Blog Empoderadas</a>
+<a class="hover:text-primary transition-colors" href="divulgacionPLE.html">PLE Divulgación</a>
+<a class="hover:text-primary transition-colors" href="proyectos.html">Otros Proyectos</a>
 </div>
-<p class="text-xs text-[#796189] dark:text-white/40">IES Puerta del Andévalo | San Bartolomé de la Torre</p>
+<div class="w-full h-px bg-[#f3f0f4] dark:bg-[#2d2438] my-2"></div>
+<div class="text-center">
+<p class="text-xs text-[#796189] dark:text-gray-500">
+                            © 2026 IES Puerta del Andévalo. Proyecto Educativo para la Igualdad en STEM.
+                        </p>
 </div>
-<div class="flex gap-6">
-<a class="text-[#796189] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
-<a class="text-[#796189] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
-<a class="text-[#796189] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">location_on</span></a>
 </div>
-<p class="text-sm text-[#796189] dark:text-white/40">© 2024 Proyecto STEAM de Innovación</p>
 </div>
 </footer>
-<!-- Floating Action Button -->
-<div class="fixed bottom-8 right-8 z-50">
-<button class="size-14 bg-primary text-white rounded-full shadow-xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95">
-<span class="material-symbols-outlined">arrow_upward</span>
-</button>
-</div>
-</div>
 </div>
 </body></html>
