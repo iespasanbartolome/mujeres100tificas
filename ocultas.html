@@ -192,7 +192,23 @@
 </div>
 </div>
 </footer>
-</div>
+<script>
+    // Seleccionamos los elementos
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    // Función para abrir/cerrar
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+
+    // Mejora de usabilidad: cerrar el menú si se cambia a pantalla grande
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 1280) { // breakpoint xl de Tailwind
+            menu.classList.add('hidden');
+        }
+    });
+</script>
 </div>
 </body>
 </html>
