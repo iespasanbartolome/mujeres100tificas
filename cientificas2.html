@@ -84,15 +84,15 @@
 </div>
 </div>
 <!-- PÁGINA EN CONSTRUCCIÓN -->
-<div class="w-full flex-1 mb-10">
-    <div class="w-full max-w-[92%] md:max-w-full mx-auto bg-center bg-no-repeat aspect-[16/9] md:aspect-[21/9] bg-cover rounded-xl shadow-lg transition-transform hover:scale-[1.01]"  
+<div class="w-full flex justify-center mb-10 px-4">
+    <div class="w-full max-w-[320px] md:max-w-full bg-center bg-no-repeat aspect-square md:aspect-[21/9] bg-cover rounded-xl shadow-lg transition-transform hover:scale-[1.01]"  
          style='background-image: url("img/enconstruccion.jpg");'>
     </div>
 </div>
 <!-- Search and Filters -->
 <div class="flex flex-col gap-4 mb-6 sticky top-[73px] z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm py-4 px-2 md:static md:bg-transparent md:backdrop-blur-none">
 <!-- Search Bar -->
-<div class="w-full max-w-[320px] md:max-w-none mx-auto">
+<div class="w-full px-2 md:px-0">
 <label class="flex flex-col h-12 w-full">
 <div class="flex w-full flex-1 items-stretch rounded-lg h-full shadow-sm">
 <div class="text-[#796189] flex border-none bg-white dark:bg-[#2a1d33] items-center justify-center pl-4 rounded-l-lg border-r-0">
@@ -178,12 +178,12 @@
 </footer>
 </div>
 <script>
-    const btn = document.getElementById('mobile-menu-button');
-    const menu = document.getElementById('mobile-menu');
+   const btn = document.getElementById('mobile-menu-button');
+   const menu = document.getElementById('mobile-menu');
 
-    btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-    });
+btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+});
 document.addEventListener('DOMContentLoaded', () => {
         const searchInput = document.getElementById('searchInput');
         // Seleccionamos todas las tarjetas que marcaste con la clase "scientist-card"
